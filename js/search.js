@@ -29,13 +29,13 @@ const renderGoods=(goods)=>{
 
         const getData=(value )=>{
 
-                fetch('/db/db.json')
+                fetch('./db/db.json')
                 .then(resp=>resp.json())
                 .then((data)=>{
                         const array=data.filter((item)=>item.name.toLowerCase().includes(value.toLowerCase()));
                         localStorage.setItem('goods',JSON.stringify(array));
-                        if (window.location.pathname !== './goods.html'){
-                        window.location.href='./goods.html';
+                        if (window.location.pathname !== 'goods.html'){
+                        window.location.href='goods.html';
                         }else{renderGoods(array);  }
                 });
         };
