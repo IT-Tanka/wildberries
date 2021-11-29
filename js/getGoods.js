@@ -75,6 +75,7 @@ const getGoods=()=>{
         
         more.addEventListener(('click'),(e)=>{
             e.preventDefault();
+	    localStorage.setItem('category', 'All');
             getData();
         });
         
