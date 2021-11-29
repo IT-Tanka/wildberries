@@ -26,7 +26,9 @@ const getGoods=()=>{
         `;
         goodsContainer.append(cardDiv);
         });
-        sectionTitle.textContent=localStorage.getItem('category');
+       if (sectionTitle){
+            sectionTitle.textContent=localStorage.getItem('category');
+        }
         
     };
 
