@@ -235,14 +235,21 @@ button {
     color: #fff
 }
 
-.section-title {
+.section-title{
+    font-family: 'Roboto Slab',
+        serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 30px;
+    color: #262d3349;
+}
+.section-title-index {
     font-family: 'Roboto Slab',
         serif;
     font-size: 25px;
     line-height: 30px;
     color: #262D33;
 }
-
 .more {
     text-decoration: none;
     color: #262D33;
