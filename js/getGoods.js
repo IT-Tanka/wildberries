@@ -1,7 +1,7 @@
 const getGoods=()=>{
 
     const links=document.querySelectorAll('.navigation-link');
-    const sectionTitle=document.querySelector('.section-title');
+    const sectionTitle=document.querySelector('.section-title-goods');
     const more=document.querySelector('.more');
     
     const renderGoods=(goods)=>{
