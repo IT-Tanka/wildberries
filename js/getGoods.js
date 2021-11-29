@@ -42,8 +42,8 @@ const getGoods=()=>{
             const array=category ? data.filter((item)=>item[category].toLowerCase()===value.toLowerCase()):data;
             localStorage.setItem('goods',JSON.stringify(array));
             
-            if (window.location.pathname !== './goods.html'){
-                window.location.href='./goods.html';
+            if (window.location.pathname !== 'goods.html'){
+                window.location.href='goods.html';
                 }else{
                     renderGoods(array, value);   
                 }
