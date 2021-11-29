@@ -4,7 +4,7 @@ const getGoods=()=>{
     const sectionTitle=document.querySelector('.section-title');
     const more=document.querySelector('.more');
     
-    const renderGoods=(goods, goodsTitle)=>{
+    const renderGoods=(goods)=>{
 
         const goodsContainer=document.querySelector('.long-goods-list');
         goodsContainer.innerHTML='';     
@@ -26,7 +26,7 @@ const getGoods=()=>{
         `;
         goodsContainer.append(cardDiv);
         });
-        sectionTitle.textContent=goodsTitle;
+        sectionTitle.textContent=localStorage.getItem('category');
         
     };
 
@@ -45,7 +45,7 @@ const getGoods=()=>{
             if (window.location.pathname !== 'goods.html'){
                 window.location.href='goods.html';
                 }else{
-                    renderGoods(array, value);   
+                    renderGoods(array);   
                 }
         });
         
@@ -57,6 +57,7 @@ const getGoods=()=>{
         link.addEventListener('click',(event)=>{
             event.preventDefault();
             const linkValue=link.textContent;
+	    localStorage.setItem('category', linkValue);
             const linkCategory=link.dataset.field;
             getData(linkValue, linkCategory);
         });
@@ -64,7 +65,7 @@ const getGoods=()=>{
     });
 
     if (localStorage.getItem('goods')){
-        renderGoods(JSON.parse(localStorage.getItem('goods')), 'All'); 
+        renderGoods(JSON.parse(localStorage.getItem('goods'))); 
     }
     
     
