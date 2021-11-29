@@ -40,7 +40,11 @@ const renderGoods=(goods)=>{
                 });
         };
 
-        searchBtn.addEventListener('click',()=> getData(input.value));
+        searchBtn.addEventListener('click',()=>  {
+            
+            localStorage.setItem('category', 'searching for...   '+ input.value);
+            getData(input.value);                  
+        });
 
 }
 search();
