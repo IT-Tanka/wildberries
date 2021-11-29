@@ -36,7 +36,7 @@ const getGoods=()=>{
         // .then(function(response){return response.json()})
         // .then(function(data){console.log(data)})
         
-        fetch('/db/db.json')
+        fetch('db/db.json')
         .then(resp=>resp.json())
         .then((data)=>{
             const array=category ? data.filter((item)=>item[category].toLowerCase()===value.toLowerCase()):data;
