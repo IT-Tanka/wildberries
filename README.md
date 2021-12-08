@@ -1,5 +1,5 @@
 # wildberris
-## 👗 online store of fashionable clothes and accessories
+## 👗  fashionable clothes and accessories online store
 
 training project  
 
