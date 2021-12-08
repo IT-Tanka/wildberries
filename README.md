@@ -1,11 +1,11 @@
 # wildberris
 ## 👗 online store of fashionable clothes and accessories
 
-training project Glo Academy
+training project  
 
-completed: I
+### completed: I
 
-### in the project used: 
+### project used: 
   languages
 - HTML
 - CSS
